@@ -1,7 +1,6 @@
-#!/usr/bin/python
 # Author: Chanin Woods
 # Built: python v.3.3
-# Updated: 23 February 2017
+# Updated: 24 February 2017
 
 ############################################################################
 # Class for vehicle object
@@ -20,18 +19,13 @@ class Vehicle():
         self.dir = face
     
     ############################################################################
-    # Function to turn vehicle toward left
+    # Functions to turn vehicle toward left or right
     # Input: self object
     # Output: self object
     ############################################################################
     def turn_left(self):
         self.dir = directions[(directions.index(self.dir)-1)%len(directions)]
     
-    ############################################################################
-    # Function to turn vehicle toward right
-    # Input: self object
-    # Output: self object
-    ############################################################################
     def turn_right(self):
         self.dir = directions[(directions.index(self.dir)+1)%len(directions)]
 
@@ -75,32 +69,6 @@ class Vehicle():
             self.x = self.x + distance
         elif direction == 'E':
             self.x = self.x - distance
-
-        return{'x':self.x, 'y':self.y, 'dir':self.dir}
-
-############################################################################
-# Function to test code (command line input)
-# Input: x (float position), y (float position), dir (string direction)
-# Output: reversed car position x, position y and direction
-############################################################################
-def main():
-    
-    #get user input
-    input_vals = [2, 2, 'N']
-    
-    #run function
-    vehicle_one = Vehicle(int(input_vals[0]), int(input_vals[1]), input_vals[2])
-    vehicle_rev = vehicle_one.reverse(1.5)
-
-    #test function
-    assert vehicle_rev['x'] == 2
-    assert vehicle_rev['y'] == 0.5
-    assert vehicle_rev['dir'] == 'N'
-
-
-
-if (__name__=="__main__"):
-    main()
 
 
 
