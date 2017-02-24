@@ -1,4 +1,9 @@
 # codeReviewFun
+Exercise learning to review someone else's code and fix your own. 
+
+Exercise obtained from:
+http://codereview.stackexchange.com/questions/155913/create-two-vehicles-move-them-on-a-grid-based-on-user-input
+
 
 ## Directions
 * Fork repository
